@@ -539,18 +539,18 @@ check_hysteria_homedir() {
 
 show_usage_and_exit() {
 	echo
-	echo -e "\t$(tbold)$SCRIPT_NAME$(treset) - AGN-UDP server install script"
+	echo -e "\t$(tbold)$SCRIPT_NAME$(treset) - XSocks Tunnel UDP server install script"
 	echo
 	echo -e "Usage:"
 	echo
-	echo -e "$(tbold)Install AGN-UDP$(treset)"
+	echo -e "$(tbold)Install XSocks Tunnel UDP$(treset)"
 	echo -e "\t$0 [ -f | -l <file> | --version <version> ]"
 	echo -e "Flags:"
 	echo -e "\t-f, --force\tForce re-install latest or specified version even if it has been installed."
-	echo -e "\t-l, --local <file>\tInstall specified AGN-UDP binary instead of download it."
+	echo -e "\t-l, --local <file>\tInstall specified XSocks Tunnel UDP binary instead of download it."
 	echo -e "\t--version <version>\tInstall specified version instead of the latest."
 	echo
-	echo -e "$(tbold)Remove AGN-UDP$(treset)"
+	echo -e "$(tbold)Remove XSocks Tunnel UDP$(treset)"
 	echo -e "\t$0 --remove"
 	echo
 	echo -e "$(tbold)Check for the update$(treset)"
@@ -641,7 +641,7 @@ tpl_hysteria_server_service_base() {
 
   cat << EOF
 [Unit]
-Description=AGN-UDP Service
+Description=XSocks Tunnel UDP Service
 After=network.target
 
 [Service]
