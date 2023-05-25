@@ -1,4 +1,4 @@
-# XSocks Tunnel by Chadzzzz
+# XSocks Tunnel
 THIS IS A SCRIPT FOR AUTO INSTALLATION OF UDP (HYSTERIA SERVER) 
 
 
