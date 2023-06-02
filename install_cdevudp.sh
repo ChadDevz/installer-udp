@@ -1,22 +1,18 @@
 #!/usr/bin/env bash
 set -e
 
+##########################################
+# XSocks Tunnel UDP SCRIPT CONFIGURATION #
+##########################################
 
-###
-# SCRIPT CONFIGURATION
-###
-
-# Domain Name
-DOMAIN="micro-vpn-backup.000webhostapp.com"
-
-# PROTOCOL
+# UDP PROTOCOL
 PROTOCOL="udp"
 
 # UDP PORT
-UDP_PORT=":36712"
+UDP_PORT=":20000-50000"
 
 # OBFS
-OBFS="xsockstunnel"
+OBFS="cdevph"
 
 # PASSWORDS
 PASSWORD="cdevph"
