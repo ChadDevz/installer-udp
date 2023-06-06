@@ -12,10 +12,10 @@ PROTOCOL="udp"
 UDP_PORT=":20000-50000"
 
 # OBFS
-OBFS="cdevph"
+OBFS="websurfvpn"
 
 # PASSWORDS
-PASSWORD="cdevph"
+PASSWORD="vpnwebsurf"
 
 # Basename of this script
 SCRIPT_NAME="$(basename "$0")"
