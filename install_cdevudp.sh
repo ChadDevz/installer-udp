@@ -1,21 +1,19 @@
-#!/usr/bin/env bash
 set -e
 
-##########################################
-# XSocks Tunnel UDP SCRIPT CONFIGURATION #
-##########################################
+# Domain Name
+DOMAIN="xsockscore.tunnel.com"
 
-# UDP PROTOCOL
+# PROTOCOL
 PROTOCOL="udp"
 
 # UDP PORT
-UDP_PORT=":20000-50000"
+UDP_PORT=":36712"
 
 # OBFS
-OBFS="websurfvpn"
+OBFS="test"
 
 # PASSWORDS
-PASSWORD="vpnwebsurf"
+PASSWORD="test"
 
 # Basename of this script
 SCRIPT_NAME="$(basename "$0")"
@@ -535,18 +533,18 @@ check_hysteria_homedir() {
 
 show_usage_and_exit() {
 	echo
-	echo -e "\t$(tbold)$SCRIPT_NAME$(treset) - XSocks Tunnel UDP server install script"
+	echo -e "\t$(tbold)$SCRIPT_NAME$(treset) - xsocks-udp server install script"
 	echo
 	echo -e "Usage:"
 	echo
-	echo -e "$(tbold)Install XSocks Tunnel UDP$(treset)"
+	echo -e "$(tbold)Install xsocks-udp$(treset)"
 	echo -e "\t$0 [ -f | -l <file> | --version <version> ]"
 	echo -e "Flags:"
 	echo -e "\t-f, --force\tForce re-install latest or specified version even if it has been installed."
-	echo -e "\t-l, --local <file>\tInstall specified XSocks Tunnel UDP binary instead of download it."
+	echo -e "\t-l, --local <file>\tInstall specified xsocks-udp binary instead of download it."
 	echo -e "\t--version <version>\tInstall specified version instead of the latest."
 	echo
-	echo -e "$(tbold)Remove XSocks Tunnel UDP$(treset)"
+	echo -e "$(tbold)Remove xsocks-udp$(treset)"
 	echo -e "\t$0 --remove"
 	echo
 	echo -e "$(tbold)Check for the update$(treset)"
@@ -637,7 +635,7 @@ tpl_hysteria_server_service_base() {
 
   cat << EOF
 [Unit]
-Description=XSocks Tunnel UDP Service
+Description=xsocks-udp Service
 After=network.target
 
 [Service]
@@ -920,22 +918,14 @@ perform_install() {
 					        start_services
 						if [[ -n "$_is_frash_install" ]]; then
 							echo
-							echo -e "$(tbold)Congratulation! XSocks Tunnel UDP has been successfully installed on your server.$(treset)"
+							echo -e "$(tbold)Congratulation! xsocks-udp has been successfully installed on your server.$(treset)"
 							echo
-							echo -e "$(tbold)Client app XSocks Tunnel:$(treset)"
-							echo -e "$(tblue)https://play.google.com/store/apps/details?id=cdev.sockscore.ph$(treset)"
-							echo
-							echo -e "Follow me!"
-							echo
-							echo -e "\t+ Check out my website at $(tblue)https://micro-vpn-backup.000webhostapp.com/$(treset)"
-							echo -e "\t+ Follow me on Telegram: $(tblue)https://t.me/simpleguyses$(treset)"
-							echo -e "\t+ Follow me on Facebook: $(tblue)https://facebook.com/madamingbabaedaw$(treset)"
 							echo
 							else
 								restart_running_services
 								
 								echo
-								echo -e "$(tbold)XSocks Tunnel UDP has been successfully update to $VERSION.$(treset)"
+								echo -e "$(tbold)xsocks-udp has been successfully update to $VERSION.$(treset)"
 								echo
 								fi
 }
@@ -946,7 +936,7 @@ perform_remove() {
 	perform_remove_hysteria_systemd
 	
 	echo
-	echo -e "$(tbold)Congratulation! XSocks Tunnel UDP has been successfully removed from your server.$(treset)"
+	echo -e "$(tbold)Congratulation! xsocks-udp has been successfully removed from your server.$(treset)"
 	echo
 	echo -e "You still need to remove configuration files and ACME certificates manually with the following commands:"
 	echo
@@ -993,7 +983,7 @@ setup_ssl() {
 }
 
 start_services() {
-	echo "Starting XSocks Tunnel UDP"
+	echo "Starting xsocks-udp"
 	apt update
 	sudo debconf-set-selections <<< "iptables-persistent iptables-persistent/autosave_v4 boolean true"
         sudo debconf-set-selections <<< "iptables-persistent iptables-persistent/autosave_v6 boolean true"
