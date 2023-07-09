@@ -7,7 +7,7 @@ DOMAIN="xsockscore.tunnel.com"
 PROTOCOL="udp"
 
 # UDP PORT
-UDP_PORT=":36712"
+UDP_PORT=":20000-50000"
 
 # OBFS
 OBFS="test"
